@@ -30,24 +30,37 @@
     PROBLEM 3: Write a function "append" that receives two arguments, a string from the FIRST parameter and an array from the SECOND parameter. The function should return the passed array with the string added to it.
     Set an empty array as the default for the second parameter.
     */
-    //ENTER YOUR CODE HERE
+    function append(str, arr = []) {
+      arr.push(str);
+      return arr;
+    }
+    console.log(append());
+    console.log(append('hello'))
 
     /*
     PROBLEM 4: Create a function "greet" that accepts two arguments, a name from the FIRST parameter and a greeting from the SECOND. greet() should return a personalised message `hello` + name if no greeting argument is provided.
     e.g greet('Ted', 'Good morning!') // Good morning!
     greet('Ted')  // hello Ted
     */
-    //ENTER YOUR CODE HERE
+    function greet(name, greeting = `hello ${name}`) {
+      return greeting;
+    }
+    console.log(greet());
+    console.log(greet('User'));
+    console.log(greet('User', 'Good morning!'));
 
     /* 
     PROBLEM 5 (DEBUGGING): Fix the issue(s) with the function "toArray" so it always returns an array of two items.
     Note: `toArray` must always be called with at least one argument
     */
-    // function toArray(x = 1, y) {
-    //   return [ x, y ];
-    // }
-    //
-    // toArray(2);
+    function toArray(x = 1, y = 1) {
+      let arr = [];
+      arr.push(x, y);
+      return arr;
+    }
+    
+    console.log(toArray(2));
+    console.log(toArray(3, 2));
 
   </script>
   <section
